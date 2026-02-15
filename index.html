@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAR | Mineralized Air Reactor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mar: {
+                dark: '#161b1b',
+                teal: '#3dc6b7',
+                tealDim: '#2a8c82',
+                copper: '#b87333',
+                brass: '#d4af37',
+                steel: '#71797E',
+              }
+            },
+            fontFamily: {
+              sans: ['Rajdhani', 'sans-serif'],
+              mono: ['Share Tech Mono', 'monospace'],
+            },
+            backgroundImage: {
+              'industrial-gradient': 'linear-gradient(135deg, #161b1b 0%, #1c2323 100%)',
+              'metal-texture': 'repeating-linear-gradient(45deg, #161b1b, #161b1b 10px, #1a2020 10px, #1a2020 20px)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #161b1b;
+        color: #e0e0e0;
+      }
+      /* Custom Scrollbar for that mechanical feel */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #161b1b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3dc6b7;
+        border: 2px solid #161b1b;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #b87333;
+      }
+      .bubble-animation {
+        animation: rise 4s infinite ease-in;
+      }
+      @keyframes rise {
+        0% { transform: translateY(100%) scale(0.5); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translateY(-20%) scale(1); opacity: 0; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
